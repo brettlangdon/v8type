@@ -18,7 +18,7 @@ npm install v8type
  * `FUNCTION - `'function'`
  * `NULL` - `'null'`
  * `NUMBER` - `'number'`
- * `NUMBER_OBJECT` - `'number_object'` (`new Number(1))
+ * `NUMBER_OBJECT` - `'number_object'` (`new Number(1)`)
  * `OBJECT` - `'object'`
  * `PRIMITIVE` - `'primitive'` (useful with `v8type.instance` function only)
  * `REGEXP` - `'regexp'`
