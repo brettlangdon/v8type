@@ -1,0 +1,26 @@
+{
+  "name": "v8type",
+  "version": "0.1.0",
+  "description": "Expose V8 C++ type checking to JS",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brettlangdon/v8type.git"
+  },
+  "keywords": [
+    "type",
+    "of",
+    "checking",
+    "check",
+    "v8",
+    "typeof",
+    "type-checking",
+    "type-check",
+    "checker"
+  ],
+  "author": "Brett Langdon <brett@blangdon.com> (http://brett.is/)",
+  "license": "MIT"
+}
