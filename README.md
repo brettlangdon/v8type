@@ -13,18 +13,23 @@ npm install v8type
 ### Constants
  * `ARRAY` - `'array'`
  * `BOOLEAN` - `'boolean'`
+ * `BOOLEAN_OBJECT` - `'boolean_object'` (`new Boolean(false)`)
  * `DATE` - `'date'`
  * `FUNCTION - `'function'`
  * `NULL` - `'null'`
  * `NUMBER` - `'number'`
+ * `NUMBER_OBJECT` - `'number_object'` (`new Number(1))
  * `OBJECT` - `'object'`
+ * `PRIMITIVE` - `'primitive'` (useful with `v8type.instance` function only)
  * `REGEXP` - `'regexp'`
  * `STRING` - `'string'`
+ * `STRING_OBJECT` - `'string_object'` (`new String('v8type')`)
  * `UNDEFINED` - `'undefined'`
 
 ### Functions
  * `of(object)` - returns the type of `object` as a string defined in the corresponding constants above.
  * `is(object, type)` - returns `boolean` if `object` matches the string type `type` (string defined in the corresponding constants above).
+ * `instance(object, type)` - returns `boolean` is `object` is of the type `type` or inherits from `type` (`type` is a string defined in the corresponding constants above).
 
 ## Examples
 
@@ -40,6 +45,9 @@ console.log(v8type.of(undefined));
 
 console.log(v8type.of(5));
 // 'number'
+
+console.log(v8type.of(new Number(5)))
+// 'number_object'
 
 console.log(v8type.of('v8type'));
 // 'string'
@@ -70,6 +78,29 @@ v8type.is({}, v8type.NULL);
 // Is does not check inheritence
 v8type.is([], v8type.OBJECT);
 // false
+```
+
+### instance function
+```javascript
+var v8type = require('v8type');
+
+v8type.instance([], v8type.ARRAY);
+// true
+
+v8type.instance([], v8type.OBJECT);
+// true
+
+v8type.instance(5, v8type.OBJECT);
+// false
+
+v8type.instance(5, v8type.PRIMITIVE);
+// true
+
+v8type.instance(new Number(5), v8type.NUMBER);
+// true
+
+v8type.instance(new Number(5), v8type.OBJECT);
+// true
 ```
 
 ## License
