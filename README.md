@@ -15,7 +15,7 @@ npm install v8type
  * `BOOLEAN` - `'boolean'`
  * `BOOLEAN_OBJECT` - `'boolean_object'` (`new Boolean(false)`)
  * `DATE` - `'date'`
- * `FUNCTION - `'function'`
+ * `FUNCTION` - `'function'`
  * `NULL` - `'null'`
  * `NUMBER` - `'number'`
  * `NUMBER_OBJECT` - `'number_object'` (`new Number(1)`)
